@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RioRise Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-mark">RR</span>
+        <div class="logo-text">
+          <span class="logo-title">RioRise</span>
+          <span class="logo-sub">Docs</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="search-wrap">
+          <input type="text" id="searchInput" placeholder="Buscar artículo o código…" autocomplete="off" />
+          <span class="search-icon">⌕</span>
+          <div id="searchResults" class="search-dropdown hidden"></div>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menú">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="nav">
+        <button class="nav-item active" data-section="home">
+          <span class="nav-icon">🏠</span> Inicio
+        </button>
+        <div class="nav-divider">Reglas Generales</div>
+        <div id="navSections"></div>
+        <div class="nav-divider">Organizaciones</div>
+        <button class="nav-item coming-soon" disabled>
+          <span class="nav-icon">🏥</span> Hospital (HP)
+          <span class="badge">Pronto</span>
+        </button>
+        <button class="nav-item" data-section="org-pf">
+          <span class="nav-icon">👮</span> Policía Federal (PF)
+        </button>
+        <button class="nav-item" data-section="hospital">
+          <span class="nav-icon">🏥</span> Hospital (HP)
+        </button>
+        <button class="nav-item" data-section="facciones">
+          <span class="nav-icon">⚔️</span> Facciones
+        </button>
+        <button class="nav-item coming-soon" disabled>
+          <span class="nav-icon">🪖</span> Ejército (EB)
+          <span class="badge">Pronto</span>
+        </button>
+        <button class="nav-item coming-soon" disabled>
+          <span class="nav-icon">💀</span> Mafias
+          <span class="badge">Pronto</span>
+        </button>
+        <button class="nav-item coming-soon" disabled>
+          <span class="nav-icon">🏚️</span> Favelas
+          <span class="badge">Pronto</span>
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <p>Recurso no oficial de la comunidad</p>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main" id="mainContent">
+
+      <!-- HOME -->
+      <section class="page active" id="page-home">
+        <div class="hero">
+          <div class="hero-label">Recurso no oficial · Comunidad RioRise</div>
+          <h1 class="hero-title">RioRise<br/><em>Docs</em></h1>
+          <p class="hero-desc">Todo el reglamento del servidor en un solo lugar. Consulta normas, códigos de sanción y protocolos de cada organización sin necesidad de Discord.</p>
+          <div class="disclaimer-box">
+            <span class="disclaimer-icon">⚠️</span>
+            <p>Este sitio es un recurso no oficial creado por la comunidad. No estamos afiliados ni representamos a Rio Rise ni a sus desarrolladores. El contenido aquí publicado es únicamente para facilitar el acceso a las normas del servidor. No me hago responsable del mal uso de esta información.</p>
+          </div>
+        </div>
+
+        <div class="game-section">
+          <h2 class="section-heading">¿Qué es Rio Rise?</h2>
+          <p class="game-desc">Rio Rise es el videojuego móvil de mundo abierto y Roleplay definitivo inspirado en la cultura y la energía de Brasil. Diseñado para ofrecer una simulación de vida libre y realista, miles de jugadores se conectan simultáneamente en un universo donde cada decisión define tu destino. Desde las vibrantes calles de las favelas hasta las zonas metropolitanas más lujosas, el mapa es tu próximo escenario de acción.</p>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🌐</div>
+              <h3>Elige Tu Camino</h3>
+              <p>Sé oficial de policía, paramédico, conductor, o elige el camino del crimen organizado con tu facción.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🚗</div>
+              <h3>Personalización</h3>
+              <p>Compra, colecciona y modifica autos de élite. Participa en subastas exclusivas y adquiere propiedades de lujo.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🌍</div>
+              <h3>Comunidad Global</h3>
+              <p>Crea alianzas, forma bandas con tus amigos o compite en eventos masivos en tiempo real.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📲</div>
+              <h3>Juega Donde Sea</h3>
+              <p>Disponible para móviles con servidores optimizados para Latinoamérica. Gráficos fluidos y chat de voz integrado.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sections-overview">
+          <h2 class="section-heading">Contenido disponible</h2>
+          <div class="overview-grid" id="overviewGrid"></div>
+        </div>
+      </section>
+
+      <!-- SECTION PAGES (generadas por JS) -->
+      <div id="dynamicPages"></div>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>RioRise Docs · Recurso no oficial creado por la comunidad · No afiliado a Rio Rise ni a sus desarrolladores</p>
+    <p class="footer-copy">© FGMCL 2026</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+pt>
+</body>
+</html>
