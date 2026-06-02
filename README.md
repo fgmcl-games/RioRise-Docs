@@ -1,8 +1,8 @@
 🌴 RioRise Docs
 
-https://img.shields.io/badge/License-Apache%202.0-blue.svg
-https://img.shields.io/badge/version-1.0.0-gold
-https://img.shields.io/badge/status-active-success
+![GitHub License](https://img.shields.io/github/license/fgmcl-games/RioRise-Docs?style=for-the-badge)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/fgmcl-games/RioRise-Docs?style=for-the-badge)
+![GitHub Repo Size](https://img.shields.io/github/repo-size/fgmcl-games/RioRise-Docs?style=for-the-badge)
 
 Repositorio oficial de RioRise Docs, una documentación web creada por la comunidad para centralizar las normas, reglamentos, sanciones y procedimientos del universo de Roleplay de Rio Rise.
 
