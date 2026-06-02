@@ -223,6 +223,34 @@ function bindSearch() {
       });
     }
 
+    if (SITE_DATA.rioNews) {
+      const r = SITE_DATA.rioNews;
+      r.sections.forEach(sub => {
+        sub.articles.forEach(art => {
+          const match =
+            art.id.toLowerCase().includes(q) ||
+            art.title.toLowerCase().includes(q) ||
+            art.content.toLowerCase().includes(q) ||
+            (art.sanction && art.sanction.toLowerCase().includes(q));
+          if (match) results.push({ secId: r.id, secTitle: r.title, art });
+        });
+      });
+    }
+
+    if (SITE_DATA.invasionRules) {
+      const iv = SITE_DATA.invasionRules;
+      iv.sections.forEach(sub => {
+        sub.articles.forEach(art => {
+          const match =
+            art.id.toLowerCase().includes(q) ||
+            art.title.toLowerCase().includes(q) ||
+            art.content.toLowerCase().includes(q) ||
+            (art.sanction && art.sanction.toLowerCase().includes(q));
+          if (match) results.push({ secId: iv.id, secTitle: iv.title, art });
+        });
+      });
+    }
+
     if (results.length === 0) {
       dropdown.innerHTML = `<div class="search-result-item"><div class="sri-title" style="color:var(--text3)">Sin resultados para "${input.value}"</div></div>`;
     } else {
@@ -314,6 +342,18 @@ function buildOrgPages() {
   if (SITE_DATA.factionRules) {
     const f = SITE_DATA.factionRules;
     container.appendChild(buildOrgPage(f.id, f.icon, f.title, f.description, f.color, f.sections));
+  }
+
+  // Rio News
+  if (SITE_DATA.rioNews) {
+    const r = SITE_DATA.rioNews;
+    container.appendChild(buildOrgPage(r.id, r.icon, r.title, r.description, r.color, r.sections));
+  }
+
+  // Invasión / Pacificación
+  if (SITE_DATA.invasionRules) {
+    const i = SITE_DATA.invasionRules;
+    container.appendChild(buildOrgPage(i.id, i.icon, i.title, i.description, i.color, i.sections));
   }
 }
 

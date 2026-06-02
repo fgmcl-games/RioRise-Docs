@@ -352,6 +352,107 @@ const SITE_DATA = {
     }
   ],
 
+  rioNews: {
+    id: "rio-news",
+    title: "Rio News (Medios)",
+    icon: "📰",
+    color: "#2980b9",
+    description: "Reglamento oficial de la facción de medios de comunicación Rio News. Normas obligatorias para todos sus empleados.",
+    sections: [
+      { subtitle: "📜 1. Disposiciones Generales", articles: [
+        { id: "RN-1.1", title: "Obligatoriedad", content: "Estas reglas son obligatorias para todos los empleados de la facción de medios Rio News.", sanction: null },
+        { id: "RN-1.2", title: "Modificaciones", content: "La dirección de la facción podrá modificar, actualizar o complementar estas reglas en cualquier momento.", sanction: null },
+        { id: "RN-1.3", title: "Sanciones", content: "El incumplimiento de cualquier punto puede resultar en advertencia, suspensión o despido, según la gravedad.", sanction: null },
+        { id: "RN-1.4", title: "Responsabilidad", content: "El desconocimiento de las reglas no exime al empleado de su responsabilidad.", sanction: null }
+      ]},
+      { subtitle: "📡 2. Principios Generales", articles: [
+        { id: "RN-2.1", title: "Difusión Clara", content: "Los medios son responsables de difundir los comunicados de manera clara y objetiva, fiel al contenido enviado por el jugador.", sanction: null },
+        { id: "RN-2.2", title: "No Alterar el Significado", content: "Está prohibido alterar el significado original del comunicado bajo ninguna circunstancia.", sanction: null },
+        { id: "RN-2.3", title: "Idioma y Ortografía", content: "Todos los anuncios deben estar editados en portugués y con ortografía correcta.", sanction: null },
+        { id: "RN-2.4", title: "Etiquetas y Símbolos", content: "Está prohibido añadir etiquetas, símbolos o caracteres adicionales antes del inicio del anuncio.", sanction: null },
+        { id: "RN-2.5", title: "Postura Profesional", content: "El editor debe mantener una postura profesional, evitando el uso excesivo de jerga, abreviaturas confusas o errores gramaticales.", sanction: null }
+      ]},
+      { subtitle: "📋 3. Estructura del Anuncio", articles: [
+        { id: "RN-3.1", title: "Estandarización Obligatoria", content: "Todos los anuncios deben seguir la siguiente estructura:\n• Compra: termina con 'Presupuesto'\n• Venta: termina con 'Precio'\n• Intercambio: termina con 'Pago adicional'\n\nEjemplos correctos:\n✓ Casa en venta en Turín. Precio: 2 millones.\n✓ Compraré una casa en Turín. Presupuesto: 4 millones.\n✓ Intercambio una casa en Turín por un coche deportivo. Pago adicional: negociable.", sanction: null }
+      ]},
+      { subtitle: "💰 4. Formato de Valores", articles: [
+        { id: "RN-4.1", title: "Escritura de Valores", content: "Los valores se pueden escribir con puntos separando los miles o usando abreviaturas (mil, millón, mil millones).", sanction: null },
+        { id: "RN-4.2", title: "Formato Correcto", content: "Es obligatorio usar el formato correcto.\n\n✗ Incorrecto: Voy a comprar una casa en Turín. 14 mil.\n✓ Correcto: Presupuesto: R$ 14.000.000.\n✓ Correcto: Presupuesto: 14 millones.", sanction: null }
+      ]},
+      { subtitle: "❓ 5. Ausencia de Información", articles: [
+        { id: "RN-5.1", title: "Anuncios sin Valor", content: "Si el anuncio no proporciona valores:\n• Venta sin valor: 'Precio: negociable'\n• Compra sin valor: 'Cotización: gratuita'\n• Intercambio sin contraprestación: 'Pago adicional: negociable'\n\nEjemplos:\n✓ Casa en venta en Turín. Precio: negociable.\n✓ Compraré una casa en Turín. Presupuesto: gratuito.", sanction: null }
+      ]},
+      { subtitle: "🔤 6. Abreviaturas Permitidas", articles: [
+        { id: "RN-6.1", title: "Uso de Abreviaturas", content: "Se permiten las abreviaturas estandarizadas, pero no son obligatorias.\n\na/c – accesorio | b/z – empresa | a/m – automóvil | g/m – camión | m/c – motocicleta | v/s – bicicleta | r/s – recurso | s/o – relación seria | d/t – elemento de tuning | t/s – vehículo | o/p – costura de ropa (cuero)", sanction: null }
+      ]},
+      { subtitle: "✍️ 7. Integridad del Contenido", articles: [
+        { id: "RN-7.1", title: "No Modificar Contenido", content: "Está prohibido modificar el contenido original del anuncio enviado por el jugador.", sanction: null },
+        { id: "RN-7.2", title: "Rol del Editor", content: "El editor solo debe corregir la ortografía, estandarizar y organizar el texto, sin alterar su significado.\n\nEjemplo de infracción:\nJugador envía: 'Vendo BMW'\nEditor publica: 'Voy a comprar un BMW. Presupuesto: libre.' ❌", sanction: null }
+      ]},
+      { subtitle: "⚙️ 8. Contenido Especial", articles: [
+        { id: "RN-8.1", title: "Plataformas Externas", content: "Están prohibidos los anuncios que mencionen plataformas externas como WhatsApp, Skype, Instagram u otras que no correspondan al Discord oficial.", sanction: null },
+        { id: "RN-8.2", title: "Anuncios de Facciones", content: "Se permiten los anuncios relacionados con facciones, pero deben adaptarse a términos neutrales.\n\n✗ Casa en venta cerca de la facción Vagos.\n✓ Casa en venta cerca del territorio de la mafia Vagos. Precio: negociable.", sanction: null }
+      ]},
+      { subtitle: "🚫 9. Prohibiciones Generales", articles: [
+        { id: "RN-9.1", title: "Artículos Prohibidos", content: "Se prohíbe anunciar la compra o venta de:\n• Drogas\n• Armas\n• Municiones", sanction: null },
+        { id: "RN-9.2", title: "Anuncios Infractores", content: "Si el anuncio infringe las normas, deberá rechazarse con justificación clara.\n\nEjemplo:\nAnuncio: 'Compro armas'\nRespuesta: 'PRO | Prohibida la venta de armas'.", sanction: null },
+        { id: "RN-9.3", title: "Un Artículo por Anuncio", content: "Se prohíbe incluir varios artículos en el mismo anuncio. Cada anuncio debe contener únicamente un vehículo, una casa, un accesorio o un recurso.", sanction: null }
+      ]},
+      { subtitle: "📝 10-11. Organización e Intercambios", articles: [
+        { id: "RN-10.1", title: "Reducción del Texto", content: "Se permite abreviar el nombre de la ciudad solo si el anuncio es muy extenso. El texto debe ser claro, organizado y sin información innecesaria.", sanction: null },
+        { id: "RN-11.1", title: "Intercambios", content: "Se permiten los intercambios, siempre que estén claramente descritos y con un pago adicional especificado cuando corresponda.\n\n✓ Intercambio una casa en Turín por un Bugatti Divo. Pago adicional: 5 millones.", sanction: null }
+      ]},
+      { subtitle: "⚖️ 12. Sanciones", articles: [
+        { id: "RN-12.1", title: "Escala de Sanciones", content: "La violación de cualquier norma puede conllevar:\n• Advertencia verbal o escrita al responsable\n• Advertencia de 1/3 a la organización; al llegar a 3/3 el responsable será despedido automáticamente\n• Expulsión del departamento de medios", sanction: null },
+        { id: "RN-12.2", title: "Errores Reiterados", content: "Los empleados que cometan repetidamente errores gramaticales, alteren el significado del anuncio o no cumplan con los estándares podrán ser despedidos de inmediato.", sanction: null }
+      ]}
+    ]
+  },
+
+  invasionRules: {
+    id: "invasion-pacificacion",
+    title: "Invasión y Pacificación",
+    icon: "🏴",
+    color: "#e67e22",
+    description: "Reglas y directrices que regulan las acciones de invasión y pacificación entre facciones, mafias y organizaciones gubernamentales dentro del servidor.",
+    sections: [
+      { subtitle: "📖 Definición", articles: [
+        { id: "IP-DEF", title: "¿Qué es la Pacificación?", content: "La pacificación es una acción estratégica llevada a cabo por una organización con el objetivo de controlar, estabilizar o reducir los conflictos en un área dominada por otra facción.\n\nObjetivos:\n• Restablecer el orden en zonas de conflicto\n• Reducir los enfrentamientos excesivos\n• Asumir el control territorial de manera organizada\n• Garantizar el dominio estratégico sin generar caos innecesario", sanction: null }
+      ]},
+      { subtitle: "✅ Autorización Obligatoria", articles: [
+        { id: "IP-1", title: "Requisito de Autorización", content: "Las invasiones o pacificaciones solo podrán iniciarse con autorización previa del Administrador Principal o del personal de soporte.\n\nLa solicitud debe realizarse con antelación, indicando:\n• La facción solicitante\n• La ubicación de la acción\n• El número de participantes\n• La hora prevista de inicio\n\nSin autorización, la acción se considerará irregular.", sanction: "Suspensión de 5 días (INA - 4.21)" },
+        { id: "IP-2", title: "Cancelación sin Autorización", content: "Si la acción se inicia sin autorización, podrá cancelarse inmediatamente y los participantes estarán sujetos a las sanciones correspondientes.", sanction: null },
+        { id: "IP-3", title: "Contexto de Rol Previo", content: "Para que se produzca una invasión o pacificación, debe existir un rol previo con una historia y un contexto, y pruebas claras que faciliten la acción.", sanction: null },
+        { id: "IP-4", title: "Número de Participantes", content: "El número de invasores y defensores no tiene por qué ser igual. Solo el líder de la facción debe estar conectado para que la acción se lleve a cabo.", sanction: null }
+      ]},
+      { subtitle: "🚫 Prohibiciones durante la Acción", articles: [
+        { id: "IP-5", title: "Reaparición en Zona Invadida", content: "Una vez iniciada la invasión, cualquier persona que reaparezca en el punto de aparición de la zona invadida, que venga de la calle o que sufra un accidente, no podrá abandonar la zona de aparición.", sanction: "60 minutos de cárcel (AAP - 4.17)" },
+        { id: "IP-6", title: "Aliados Externos", content: "En acciones de invasión o pacificación, los aliados tienen prohibido ayudarse mutuamente, ya sea directa o indirectamente.", sanction: "1/3 de advertencia para la facción" },
+        { id: "IP-7", title: "Permanecer Cerca", content: "No está permitido permanecer cerca de la organización durante la invasión, ya que esto constituye apoyo externo o comportamiento anti-juego.", sanction: "60 minutos de cárcel (AAP - 4.17)" },
+        { id: "IP-8", title: "Armas No Letales", content: "El uso de pistolas Taser y porras está prohibido durante las operaciones de invasión o pacificación. Solo se permite el uso de armas letales.", sanction: "60 minutos de cárcel (FALLO - 4.22)" }
+      ]},
+      { subtitle: "⚔️ PF × Facción × EB × Mafia", articles: [
+        { id: "IP-9", title: "Victoria de PF o EB sobre Facción", content: "En caso de victoria de la Policía o el Ejército, la facción derrotada quedará inactiva durante 24 horas.", sanction: null },
+        { id: "IP-10", title: "Victoria del EB sobre Mafia", content: "En caso de victoria del Ejército sobre la mafia, la mafia derrotada quedará inactiva durante 12 horas (a partir de las 00:00).", sanction: null },
+        { id: "IP-11", title: "Mínimo de Agentes PF", content: "Se requiere un mínimo de 10 agentes de policía para iniciar la acción.", sanction: null },
+        { id: "IP-12", title: "Programación de Pacificación", content: "Las operaciones de mantenimiento de la paz deben programarse con al menos 24 horas de antelación, especificando la fecha, la hora y las organizaciones participantes.", sanction: null }
+      ]},
+      { subtitle: "🚨 Invasión de la Prisión (PS)", articles: [
+        { id: "IP-PS", title: "Reglas de Invasión a la PS", content: "La invasión de la PS es exclusiva para las facciones Verde y Morada, con el objetivo de rescatar miembros encarcelados. No es necesario programar ninguna acción previa.\n\nHorario de rescate:\n• De 8:00 a 12:00\n• De 13:00 a 24:00\n\n⚠️ Está prohibido realizar cualquier acción en la PS entre las 12:00 y las 13:00.", sanction: "INA - 4.21 por acción fuera de horario" }
+      ]},
+      { subtitle: "⏰ Horarios de Control de Mafia", articles: [
+        { id: "IP-MAFIA-HOR", title: "Toma de Control de la Mafia", content: "Lunes, martes, miércoles, viernes y domingo: de 21:00 a 22:00.\nJueves y sábado: de 22:00 a 23:00.", sanction: null }
+      ]},
+      { subtitle: "📦 Calendario de Carga (CRM)", articles: [
+        { id: "IP-CRM", title: "Configuración Semanal", content: "Lunes — Facción Verde\nMartes — Mafia de la Colina\nMiércoles — Facción Morada\nJueves — Mafia Costera\nViernes — 17:00 Mafia Costera | 19:00 Mafia de la Colina\nSábado — 17:00 Verdes | 19:00 Moradas\nDomingo — Acción libre\n\n📌 Regla del domingo: La primera mafia o facción que llegue al punto de carga se queda con la acción.", sanction: null }
+      ]},
+      { subtitle: "🚨 Invasión del EB", articles: [
+        { id: "IP-EB", title: "Horarios de Invasión al EB", content: "Martes: Facciones Morada y Verde de 17:00 a 24:00.\n\nJueves: Ambas mafias pueden programar una acción contra el EB entre las 19:00 y las 23:00. Intervalo mínimo obligatorio de 2 horas entre acciones.\n\nReglas adicionales:\n• Si una familia roba un maletín durante una acción de la mafia en el EB, la familia que conquiste la mafia en ausencia de la otra verá su mafia reiniciada y recibirá una advertencia.\n• La mafia anterior recuperará su mafia.", sanction: null },
+        { id: "IP-PAC", title: "Horarios de Pacificación", content: "Sábado: Operación de pacificación del Ejército contra las mafias [21:00 a 22:00].\n\nDomingo y lunes: Operación de pacificación del Ejército y la Policía Federal contra las facciones [21:00 a 00:00].", sanction: null }
+      ]}
+    ]
+  },
+
   armyRules: {
     id: "ejercito",
     title: "Reglamento del Ejército (EB)",
