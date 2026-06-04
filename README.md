@@ -1,173 +1,182 @@
-🌴 RioRise Docs
+<div align="center">
 
-![GitHub License](https://img.shields.io/github/license/fgmcl-games/RioRise-Docs?style=for-the-badge)
-![GitHub Last Commit](https://img.shields.io/github/last-commit/fgmcl-games/RioRise-Docs?style=for-the-badge)
-![GitHub Repo Size](https://img.shields.io/github/repo-size/fgmcl-games/RioRise-Docs?style=for-the-badge)
+# 🌴 RioRise Docs
 
-Repositorio oficial de RioRise Docs, una documentación web creada por la comunidad para centralizar las normas, reglamentos, sanciones y procedimientos del universo de Roleplay de Rio Rise.
+**El recurso no oficial más completo del universo Roleplay de Rio Rise.**
+Normas, reglamentos, sanciones y procedimientos — todo en un solo lugar, sin necesidad de Discord.
 
-📖 Sitio Web
+[![Licencia](https://img.shields.io/github/license/fgmcl-games/RioRise-Docs?style=for-the-badge&color=e8c84a&labelColor=0d0f14)](LICENSE)
+[![Último commit](https://img.shields.io/github/last-commit/fgmcl-games/RioRise-Docs?style=for-the-badge&color=50c8a0&labelColor=0d0f14)](https://github.com/fgmcl-games/RioRise-Docs/commits/main)
+[![Tamaño del repo](https://img.shields.io/github/repo-size/fgmcl-games/RioRise-Docs?style=for-the-badge&color=4a90e2&labelColor=0d0f14)](https://github.com/fgmcl-games/RioRise-Docs)
 
-Accede a la documentación desde:
+<br/>
 
-https://fgmcl-games.github.io/RioRise-Docs/
+🌐 **[Acceder al sitio →](https://fgmcl-games.github.io/RioRise-Docs/)**
 
-✨ Características
+</div>
 
-- 📚 Reglamento completo del servidor.
-- ⚖️ Sistema de sanciones documentado.
-- 👮 Reglamentos de organizaciones gubernamentales.
-- 👨‍👩‍👧‍👦 Normativas familiares.
-- 🚨 Reglas de acciones especiales.
-- 🔍 Buscador integrado por código, título y contenido.
-- 📱 Diseño adaptable para dispositivos móviles.
-- ⚡ Sitio web ligero y rápido.
-- 🌙 Interfaz moderna con tema oscuro.
-- 🗂️ Navegación organizada por categorías.
+---
 
-🏗️ Estructura del Proyecto
+## ¿Qué es RioRise Docs?
 
+RioRise Docs es una plataforma de documentación web creada por la comunidad para centralizar todo el reglamento del servidor de Roleplay Rio Rise. El proyecto nació de la necesidad de tener un punto de referencia claro, accesible y permanente que no dependa de saber navegar Discord.
+
+Cualquier jugador puede consultar normas, entender sanciones, conocer los reglamentos de cada organización y saber cómo abrir un ticket de soporte — desde cualquier dispositivo, en cualquier momento.
+
+---
+
+## ✨ Características
+
+| Categoría | Descripción |
+|---|---|
+| 📚 Reglamento completo | Reglas generales, Biblia RP, sanciones y procedimientos |
+| 🏛️ Organizaciones | PF, Ejército, Hospital, Facciones, Rio News |
+| ⚔️ Acciones especiales | Secuestros, Vehículo Blindado, Invasión y Pacificación |
+| 🔍 Búsqueda integrada | Filtra por código de artículo, título o contenido |
+| 🎫 Guía de soporte | Cómo abrir tickets con las preguntas requeridas por categoría |
+| 📱 Diseño responsivo | Adaptado para móvil, tablet y escritorio |
+| ⚡ Sin dependencias | Cero frameworks, cero instalaciones. Abre y listo |
+| 🌙 Tema oscuro | Interfaz moderna, limpia y de bajo consumo visual |
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
 RioRise-Docs/
 │
-├── index.html      # Estructura principal del sitio
-├── styles.css      # Estilos y diseño visual
+├── index.html      # Estructura HTML del sitio
+├── styles.css      # Sistema de diseño y estilos visuales
 ├── script.js       # Navegación, búsqueda y renderizado dinámico
-├── data.js         # Base de datos de reglas y contenido
-├── LICENSE         # Licencia Apache 2.0
-└── README.md
+├── data.js         # Base de datos de reglas, artículos y contenido
+├── LICENSE         # Apache License 2.0
+└── README.md       # Este archivo
+```
 
-⚙️ Cómo Funciona
+---
 
-Toda la documentación se almacena en "data.js".
+## ⚙️ Arquitectura
 
-Las páginas, artículos, categorías y resultados de búsqueda se generan dinámicamente mediante JavaScript, permitiendo mantener el contenido separado de la interfaz visual.
+Todo el contenido vive en `data.js` como objetos JavaScript estructurados. El sitio no tiene backend ni base de datos — todo se genera en el navegador de forma dinámica.
 
-Este enfoque facilita:
+```
+data.js  →  script.js  →  index.html
+[Datos]     [Lógica]      [Interfaz]
+```
 
-- Actualizar reglas rápidamente.
-- Agregar nuevas organizaciones.
-- Incorporar nuevas categorías.
-- Modificar sanciones.
-- Mantener una estructura escalable y fácil de administrar.
+Este modelo hace que agregar nuevas secciones sea tan simple como añadir un objeto al archivo de datos. Sin tocar HTML, sin recompilar, sin desplegar servicios.
 
-🚀 Desarrollo Local
+**Lo que facilita esta arquitectura:**
 
-Clona el repositorio:
+- Actualizar sanciones o artículos en segundos
+- Agregar nuevas organizaciones sin tocar la interfaz
+- Mantener la búsqueda siempre sincronizada con el contenido
+- Escalar el proyecto sin aumentar la complejidad
 
+---
+
+## 🚀 Desarrollo Local
+
+**1. Clona el repositorio**
+```bash
 git clone https://github.com/fgmcl-games/RioRise-Docs.git
-
-Accede al directorio:
-
 cd RioRise-Docs
+```
 
-Abre "index.html" en tu navegador o ejecuta un servidor local:
+**2. Inicia un servidor local**
 
-python -m http.server
+Con Python:
+```bash
+python -m http.server 8000
+```
 
-Luego visita:
+Con Node.js:
+```bash
+npx serve .
+```
 
+**3. Abre en tu navegador**
+```
 http://localhost:8000
+```
 
-🤝 Contribuciones
+> También puedes abrir `index.html` directamente en el navegador para uso básico, aunque algunas funciones pueden requerir servidor local.
 
-Las contribuciones son bienvenidas.
+---
 
-Si encuentras:
+## 🤝 Cómo Contribuir
 
-- Errores ortográficos.
-- Información desactualizada.
-- Enlaces rotos.
-- Problemas de navegación.
-- Errores técnicos.
-- Mejoras visuales o funcionales.
+Las contribuciones son bienvenidas y valoradas. El proyecto mejora con cada aporte de la comunidad.
 
-Puedes abrir un Issue o enviar un Pull Request.
+**¿Encontraste algo que mejorar?**
 
-🌟 Únete al Proyecto
+- 📝 Errores ortográficos o de redacción
+- ⚖️ Información de sanciones desactualizada
+- 🔗 Artículos faltantes o incompletos
+- 🐛 Errores de navegación o búsqueda
+- 🎨 Mejoras visuales o de accesibilidad
+- 🌐 Contenido nuevo del servidor oficial
 
-RioRise Docs es un proyecto impulsado por la comunidad.
+**¿Cómo participar?**
 
-Si eres:
+1. Haz un fork del repositorio
+2. Crea una rama descriptiva (`feature/agregar-reglamento-eb`)
+3. Realiza tus cambios con commits claros
+4. Abre un Pull Request explicando qué cambiaste y por qué
 
-- Desarrollador web.
-- Diseñador UI/UX.
-- Redactor de documentación.
-- Moderador con experiencia en Roleplay.
-- Traductor.
-- Colaborador interesado en mejorar el proyecto.
+También puedes abrir un **Issue** si encuentras algo incorrecto y no sabes cómo corregirlo.
 
-Y deseas participar en el desarrollo o mantenimiento de la documentación, puedes ponerte en contacto a través del correo electrónico:
+---
 
-📧 fgmclgames@gmail.com
+## 🌟 Únete al Proyecto
 
-Toda ayuda es bienvenida para seguir mejorando la experiencia de la comunidad.
+RioRise Docs es un proyecto de comunidad abierto a colaboradores de cualquier perfil.
 
-🔓 ¿Qué Significa la Licencia Apache 2.0?
+Si eres desarrollador web, diseñador UI/UX, redactor de documentación, moderador con experiencia en servidores de RP, o simplemente alguien con ganas de aportar, hay espacio para ti aquí.
 
-Este proyecto se distribuye bajo la licencia Apache License 2.0, una licencia de software libre y de código abierto ampliamente utilizada.
+📧 Contacto directo: **fgmclgames@gmail.com**
 
-✅ Lo que puedes hacer
+---
 
-- Usar el código para proyectos personales o comerciales.
-- Modificar el código fuente.
-- Distribuir copias del proyecto.
-- Publicar versiones modificadas.
-- Integrar partes del proyecto en otros desarrollos.
+## 📄 Licencia
 
-📌 Condiciones
-
-Si distribuyes una copia del proyecto o una versión modificada, debes:
-
-- Conservar el aviso de copyright original.
-- Mantener una copia de la licencia Apache 2.0.
-- Indicar claramente cualquier modificación realizada al código original.
-- Mantener los avisos legales incluidos en el proyecto.
-
-❌ Lo que no permite
-
-- Utilizar el nombre de los autores o colaboradores para promocionar proyectos derivados sin autorización.
-- Eliminar los avisos legales o de licencia requeridos.
-
-🛡️ Garantías
-
-Este proyecto se proporciona "TAL CUAL" ("AS IS"), sin garantías de ningún tipo.
-
-Los autores y colaboradores no serán responsables de daños, pérdidas o problemas derivados del uso del software.
-
-❤️ Contribuciones y Licencia
-
-Al contribuir a este proyecto, aceptas que tus aportes puedan ser distribuidos bajo la misma licencia Apache 2.0 para garantizar que el proyecto permanezca abierto y accesible para toda la comunidad.
-
-📢 Nota Importante
-
-La licencia Apache 2.0 cubre el código fuente, la estructura y los recursos desarrollados para este proyecto.
-
-Las marcas, nombres, logotipos, contenido oficial y cualquier otro material perteneciente a Rio Rise continúan siendo propiedad de sus respectivos autores y propietarios.
-
-📬 Contacto
-
-FGMCL Games
-
-📧 fgmclgames@gmail.com
-
-⚠️ Descargo de Responsabilidad
-
-RioRise Docs es un recurso creado por la comunidad.
-
-No está afiliado oficialmente a Rio Rise ni a sus desarrolladores. Toda la información recopilada tiene fines informativos y busca facilitar el acceso a las normas y reglamentos del servidor.
-
-El contenido publicado puede cambiar con el tiempo conforme se actualicen las reglas oficiales del servidor.
-
-📄 Licencia
-
+```
 Copyright © 2026 FGMCL Games
 
-Licenciado bajo la Apache License, Version 2.0.
-
-Puedes obtener una copia de la licencia en:
-
+Licensed under the Apache License, Version 2.0.
 http://www.apache.org/licenses/LICENSE-2.0
+```
 
-A menos que la legislación aplicable o un acuerdo por escrito indiquen lo contrario, el software distribuido bajo la Licencia se distribuye "TAL CUAL", sin garantías ni condiciones de ningún tipo, ya sean expresas o implícitas.
+**En resumen, esta licencia te permite:**
 
-Consulta el archivo "LICENSE" para obtener el texto completo de la licencia.
+- ✅ Usar el código en proyectos personales o comerciales
+- ✅ Modificar el código fuente libremente
+- ✅ Distribuir copias o versiones modificadas
+- ✅ Integrar partes del proyecto en otros desarrollos
+
+**Con la condición de:**
+
+- 📌 Conservar el aviso de copyright original
+- 📌 Incluir una copia de la licencia Apache 2.0
+- 📌 Indicar claramente cualquier modificación al código original
+- 📌 No usar el nombre de los autores para promocionar derivados sin autorización
+
+El proyecto se proporciona **"tal cual"**, sin garantías de ningún tipo.
+
+---
+
+## ⚠️ Descargo de Responsabilidad
+
+RioRise Docs es un recurso independiente creado por la comunidad. **No está afiliado oficialmente a Rio Rise ni a sus desarrolladores.** Todo el contenido publicado tiene fines informativos y busca facilitar el acceso a las normas del servidor.
+
+Las marcas, nombres, logotipos y cualquier material oficial perteneciente a Rio Rise siguen siendo propiedad exclusiva de sus autores y titulares.
+
+El contenido puede actualizarse conforme cambien las reglas oficiales del servidor.
+
+---
+
+<div align="center">
+
+Hecho con ❤️ por la comunidad · **FGMCL Games** · 2026
+
+</div>
